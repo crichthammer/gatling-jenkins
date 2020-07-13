@@ -106,6 +106,10 @@ class FinalChallenge extends Simulation {
     )
   ).protocols(httpConf.inferHtmlResources())
     .maxDuration(testDuration seconds)
+      .assertions(
+        global.responseTime.max.lt(2),
+        global.successfulRequests.percent.gt(99)
+      )
 
   after {
     println("Stress test completed")
