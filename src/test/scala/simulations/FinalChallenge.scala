@@ -48,7 +48,7 @@ class FinalChallenge extends Simulation {
   ))
 
   before {
-    println(s"Running test with ${userCount} users")
+    println(s"Running the test with ${userCount} users")
     println(s"Ramping users over ${rampDuration} seconds")
     println(s"Total test duration: ${testDuration} seconds")
   }
